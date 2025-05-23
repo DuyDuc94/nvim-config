@@ -17,3 +17,8 @@ end
 local function terminal_map(lhs, rhs, opts)
   map("t", lhs, rhs, opts)
 end
+
+normal_map("<leader>fd", function()
+  vim.cmd("confirm !rm %")
+  vim.cmd("bd!")
+end, { desc = "Delete file" })
