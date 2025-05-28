@@ -1,12 +1,18 @@
 return {
   {
-    "nvim-treesitter/nvim-treesitter",
-    config = function()
-      require("nvim-treesitter.configs").setup({
-        ensure_installed = { "elixir", "eex", "heex" },
-        highlight = { enable = true },
-        indent = { enable = true },
-      })
-    end,
+    "neovim/nvim-lspconfig",
+    opts = {
+      servers = {
+        elixirls = {
+          cmd = { vim.fn.stdpath("data") .. "/mason/packages/elixir-ls/language_server.sh" },
+          settings = {
+            elixirLS = {
+              dialyzerEnabled = false,
+              fetchDeps = false,
+            },
+          },
+        },
+      },
+    },
   },
 }
