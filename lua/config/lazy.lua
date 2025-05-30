@@ -25,7 +25,6 @@ require("lazy").setup({
       },
     },
     -- LazyVim's extra plugins
-    { import = "lazyvim.plugins.extras" },
     { import = "lazyvim.plugins.extras.ai.copilot" },
     -- Personal's plugins
     { import = "plugins" },
