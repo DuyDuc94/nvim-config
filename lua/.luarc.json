@@ -1,0 +1,10 @@
+{
+    "workspace.library": [
+        "/Users/goose/.config/nvim",
+        "/Users/goose/.nvim/share/nvim/runtime",
+        "/Users/goose/.nvim/share/nvim/runtime/pack/dist/opt/matchit",
+        "/Users/goose/.nvim/lib/nvim",
+        "${3rd}/luassert/library",
+        "${3rd}/luv/library"
+    ]
+}

@@ -1,0 +1,13 @@
+# Source: https://github.com/honza/vim-snippets/blob/master/snippets/markdown.snippets
+
+snippet it.project
+  it("${1:description}", function()
+    ${0}
+  end)
+
+snippet describe.project
+  describe("${1:description}", function()
+    it("${2:description}", function()
+      ${0}
+    end)
+  end)

@@ -1,0 +1,151 @@
+# Source: https://github.com/honza/vim-snippets/blob/master/snippets/markdown.snippets
+
+# The suffix `c` stands for "Clipboard".
+
+snippet [
+  [${1:text}](${2:address})
+snippet [*
+  [${1:link}](${2:`@*`})
+snippet [c
+  [${1:link}](${2:`@+`})
+snippet ["
+  [${1:text}](https://${2:address} "${3:title}")
+snippet ["*
+  [${1:link}](${2:`@*`} "${3:title}")
+snippet ["c
+  [${1:link}](${2:`@+`} "${3:title}")
+snippet [:
+  [${1:id}]: https://${2:url}
+
+snippet [:*
+  [${1:id}]: ${2:`@*`}
+
+snippet [:c
+  [${1:id}]: ${2:`@+`}
+
+snippet [:"
+  [${1:id}]: https://${2:url} "${3:title}"
+
+snippet [:"*
+  [${1:id}]: ${2:`@*`} "${3:title}"
+
+snippet [:"c
+  [${1:id}]: ${2:`@+`} "${3:title}"
+
+snippet ![
+  ![${1:alttext}](${2:/images/image.jpg})
+snippet ![*
+  ![${1:alt}](${2:`@*`})
+snippet ![c
+  ![${1:alt}](${2:`@+`})
+snippet !["
+  ![${1:alttext}](${2:/images/image.jpg} "${3:title}")
+snippet !["*
+  ![${1:alt}](${2:`@*`} "${3:title}")
+snippet !["c
+  ![${1:alt}](${2:`@+`} "${3:title}")
+snippet ![:
+  ![${1:id}]: ${2:url}
+
+snippet <
+  <http://${1:url}>
+snippet <*
+  <`@*`>
+snippet <c
+  <`@+`>
+snippet ** Bold
+  **$0**
+snippet __ Bold
+  __$0__
+snippet --- Front matter
+  ---
+  $0
+  ---
+snippet ====
+  `repeat('=', strlen(getline(line('.') - 3)))`
+
+  ${0}
+snippet -
+  -   ${0}
+snippet ----
+  `repeat('-', strlen(getline(line('.') - 3)))`
+
+  ${0}
+snippet blockquote
+  {% blockquote %}
+  ${0:quote}
+  {% endblockquote %}
+
+snippet blockquote-author
+  {% blockquote ${1:author}, ${2:title} %}
+  ${0:quote}
+  {% endblockquote %}
+
+snippet blockquote-link
+  {% blockquote ${1:author} ${2:URL} ${3:link_text} %}
+  ${0:quote}
+  {% endblockquote %}
+
+snippet ```
+  \`\`\`${1}
+  ${0:${VISUAL}}
+  \`\`\`
+
+# Language.
+snippet ```l
+  \`\`\`${1:language}
+  ${2:code}
+  \`\`\`
+
+snippet codeblock-short
+  {% codeblock %}
+  ${0:code_snippet}
+  {% endcodeblock %}
+
+snippet codeblock-full
+  {% codeblock ${1:title} lang:${2:language} ${3:URL} ${4:link_text} %}
+  ${0:code_snippet}
+  {% endcodeblock %}
+
+snippet img
+  {% img ${1:class} ${2:URL} ${3:width} ${4:height} ${5:title_text} ${0:alt_text} %}
+
+snippet tb
+  |  ${0:factors}      |    ${1:a}       |  ${2:b}   	|
+  | ------------- |-------------  | ------- |
+  |    ${3:f1}    |    Y          | N       |
+  |    ${4:f2}    |    Y          | N       |
+
+# JSX syntax: cover some common tags
+snippet a
+  <a href="${1:url}">${2:text}</a>
+snippet img
+  <img src="${1:url}" alt="${2:text}" />
+snippet div
+  <div>${1:text}</div>
+snippet span
+  <span>${1:text}</span>
+snippet p
+  <p>${1:text}</p>
+snippet h1
+  <h1>${1:text}</h1>
+snippet h2
+  <h2>${1:text}</h2>
+snippet h3
+  <h3>${1:text}</h3>
+snippet h4
+  <h4>${1:text}</h4>
+snippet h5
+  <h5>${1:text}</h5>
+snippet h6
+  <h6>${1:text}</h6>
+snippet ul
+  <ul>${1:text}</ul>
+snippet ol
+  <ol>${1:text}</ol>
+snippet li
+  <li>${1:text}</li>
+snippet em
+  <em>${1:text}</em>
+snippet strong
+  <strong>${1:text}</strong>

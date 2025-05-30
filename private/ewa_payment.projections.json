@@ -1,0 +1,211 @@
+{
+  "app/controllers/*_controller.rb": {
+    "command": "controller",
+    "alternate": "spec/requests/{}_spec.rb",
+    "related": "app/models/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}Controller < ApplicationController\nend"
+  },
+  "engines/ewa_payroll/app/controllers/ewa_payroll/*_controller.rb": {
+    "command": "controller",
+    "alternate": "spec/requests/ewa_payroll/{}_spec.rb",
+    "related": "engines/ewa_payroll/app/models/ewa_payroll/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}Controller < ApplicationController\nend"
+  },
+  "engines/ewa_user/app/controllers/ewa_user/*_controller.rb": {
+    "command": "controller",
+    "alternate": "spec/requests/ewa_user/{}_spec.rb",
+    "related": "engines/ewa_user/app/models/ewa_user/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}Controller < ApplicationController\nend"
+  },
+
+  "app/forms/*_form.rb": {
+    "command": "form",
+    "alternate": "spec/forms/{}_form_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}Form\nend"
+  },
+  "engines/ewa_payroll/app/forms/ewa_payroll/*_form.rb": {
+    "command": "form",
+    "alternate": "spec/requests/ewa_payroll/{}_form_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}Form\nend"
+  },
+  "engines/ewa_user/app/forms/ewa_user/*_form.rb": {
+    "command": "form",
+    "alternate": "spec/requests/ewa_user/{}_form_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}Form\nend"
+  },
+
+  "app/models/*.rb": {
+    "command": "model",
+    "alternate": "spec/models/{}_spec.rb",
+    "related": "app/controllers/{}_controller.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationRecord\nend"
+  },
+  "engines/ewa_payroll/app/models/ewa_payroll/*.rb": {
+    "command": "model",
+    "alternate": "spec/models/ewa_payroll/{}_spec.rb",
+    "related": "engines/ewa_payroll/app/controllers/ewa_payroll/{}_controller.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationRecord\nend"
+  },
+  "engines/ewa_user/app/models/ewa_user/*.rb": {
+    "command": "model",
+    "alternate": "spec/models/ewa_user/{}_spec.rb",
+    "related": "engines/ewa_user/app/controllers/ewa_user/{}_controller.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationRecord\nend"
+  },
+
+  "app/decorators/*_decorator.rb": {
+    "command": "decorator",
+    "alternate": "spec/decorators/{}_decorator_spec.rb",
+    "related": "app/models/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < SimpleDelegator\nend"
+  },
+  "engines/ewa_payroll/app/decorators/ewa_payroll/*_decorator.rb": {
+    "command": "decorator",
+    "alternate": "spec/decorators/ewa_payroll/{}_decorator_spec.rb",
+    "related": "engines/ewa_payroll/app/models/ewa_payroll/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < SimpleDelegator\nend"
+  },
+  "engines/ewa_user/app/decorators/ewa_user/*_decorator.rb": {
+    "command": "decorator",
+    "alternate": "spec/decorators/ewa_user/{}_decorator_spec.rb",
+    "related": "engines/ewa_user/app/models/ewa_user/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < SimpleDelegator\nend"
+  },
+
+  "app/jobs/*_job.rb": {
+    "command": "job",
+    "alternate": "spec/jobs/{}_job_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationJob\nend"
+  },
+  "engines/ewa_payroll/app/jobs/ewa_payroll/*_job.rb": {
+    "command": "job",
+    "alternate": "spec/jobs/ewa_payroll/{}_job_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationJob\nend"
+  },
+  "engines/ewa_user/app/jobs/ewa_user/*_job.rb": {
+    "command": "job",
+    "alternate": "spec/jobs/ewa_user/{}_job_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationJob\nend"
+  },
+
+  "app/mailers/*_mailer.rb": {
+    "command": "mailer",
+    "alternate": "spec/mailers/{}_mailer_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationMailer\nend"
+  },
+  "engines/ewa_payroll/app/mailers/ewa_payroll/*_mailer.rb": {
+    "command": "mailer",
+    "alternate": "spec/mailers/ewa_payroll/{}_mailer_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationMailer\nend"
+  },
+  "engines/ewa_user/app/mailers/ewa_user/*_mailer_job.rb": {
+    "command": "mailer",
+    "alternate": "spec/mailers/ewa_user/{}_mailer_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationMailer\nend"
+  },
+
+  "app/policies/*_policy.rb": {
+    "command": "policy",
+    "alternate": "spec/policies/{}_policy_spec.rb",
+    "related": "app/models/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationPolicy\nend"
+  },
+  "engines/ewa_payroll/app/policies/ewa_payroll/*_policy.rb": {
+    "command": "policy",
+    "alternate": "spec/policies/ewa_payroll/{}_policy_spec.rb",
+    "related": "engines/ewa_payroll/app/models/ewa_payroll/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationPolicy\nend"
+  },
+  "engines/ewa_user/app/policies/ewa_user/*_policy.rb": {
+    "command": "policy",
+    "alternate": "spec/policies/ewa_user/{}_policy_spec.rb",
+    "related": "engines/ewa_user/app/models/ewa_user/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ApplicationPolicy\nend"
+  },
+
+  "app/presenters/*_presenter.rb": {
+    "command": "presenter",
+    "alternate": "spec/presenters/{}_presenter_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}\nend"
+  },
+  "engines/ewa_payroll/app/presenters/ewa_payroll/*_presenter.rb": {
+    "command": "presenter",
+    "alternate": "spec/presenters/ewa_payroll/{}_presenter_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}\nend"
+  },
+  "engines/ewa_user/app/presenters/ewa_user/*_presenter.rb": {
+    "command": "presenter",
+    "alternate": "spec/presenters/ewa_user/{}_presenter_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}\nend"
+  },
+
+  "app/queries/*_query.rb": {
+    "command": "query",
+    "alternate": "spec/queries/{}_query_spec.rb",
+    "related": "app/models/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}\nend"
+  },
+  "engines/ewa_payroll/app/queries/ewa_payroll/*_query.rb": {
+    "command": "query",
+    "alternate": "spec/queries/ewa_payroll/{}_query_spec.rb",
+    "related": "engines/ewa_payroll/app/models/ewa_payroll/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}\nend"
+  },
+  "engines/ewa_user/app/queries/ewa_user/*_query.rb": {
+    "command": "query",
+    "alternate": "spec/queries/ewa_user/{}_query_spec.rb",
+    "related": "engines/ewa_user/app/models/ewa_user{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}\nend"
+  },
+
+  "app/serializers/*_serializer.rb": {
+    "command": "serializer",
+    "alternate": "spec/serializers/{}_serializer_spec.rb",
+    "related": "app/models/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < JsonSerializer\nend"
+  },
+  "engines/ewa_payroll/app/serializers/ewa_payroll/*_serializer.rb": {
+    "command": "serializer",
+    "alternate": "spec/serializers/ewa_payroll/{}_serializer_spec.rb",
+    "related": "engines/ewa_payroll/app/models/ewa_payroll/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} > JsonSerializer\nend"
+  },
+  "engines/ewa_user/app/serializers/ewa_user/*_serializer.rb": {
+    "command": "serializer",
+    "alternate": "spec/serializers/ewa_user/{}_serializer_spec.rb",
+    "related": "engines/ewa_user/app/models/ewa_user/{}.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} > JsonSerializer\nend"
+  },
+
+  "app/validators/*_validator.rb": {
+    "command": "validator",
+    "alternate": "spec/validators/{}_validator_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} < ActiveModel::Validator\nend"
+  },
+  "engines/ewa_payroll/app/validators/*_validator.rb": {
+    "command": "validator",
+    "alternate": "spec/validators/ewa_payroll/{}_validator_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} > ActiveModel::Validator\nend"
+  },
+  "engines/ewa_user/app/validators/ewa_user/*_validator.rb": {
+    "command": "validator",
+    "alternate": "spec/validators/ewa_user/{}_validator_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons} > ActiveModel::Validator\nend"
+  },
+
+  "engines/ewa_payroll/app/services/*_service.rb": {
+    "command": "service",
+    "alternate": "spec/services/{}_service_spec.rb",
+    "template": "# frozen_string_literal: true\n\nclass {camelcase|capitalize|colons}\nend"
+  },
+
+  "app/views/*.html.erb": {
+    "command": "view"
+  },
+  "engines/ewa_payroll/app/views/ewa_payroll/*.html.erb": {
+    "command": "view"
+  },
+  "engines/ewa_user/app/views/ewa_user/ewa_user/*.html.erb": {
+    "command": "view"
+  }
+}
